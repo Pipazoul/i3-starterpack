@@ -1,6 +1,6 @@
 # set modifier
-set $super Mod4
-set $alt Mod1
+set $super Mod1
+set $alt Mod4
 
 # set font
 font pango: Noto Sans 8
@@ -68,6 +68,9 @@ bindsym $super+s layout toggle split
 
 # toggle tiling / floating
 bindsym $super+space floating toggle
+
+bindsym $super+z layout tabbed
+bindsym $super+e layout default
 
 # change focus between tiling / floating windows
 bindsym $super+Shift+space focus mode_toggle
@@ -141,3 +144,10 @@ client.unfocused		#2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.urgent			#2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.placeholder		#2f343f #2f343f #d8dee8 #2f343f #2f343f
 client.background		#2f343f
+
+
+# wifi applet
+exec --no-startup-id nm-applet
+
+# bluetooth applet
+exec --no-startup-id blueman-applet
